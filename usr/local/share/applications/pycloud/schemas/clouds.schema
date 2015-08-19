@@ -1,0 +1,207 @@
+[{
+        "aps": {
+                "href": "https://apsc.aps-standard.org/types/90", 
+                "id": "90"
+        }, 
+        "apsVersion": "2.0", 
+        "id": "http://aps-standard.org/samples/starter/cloud/1.0", 
+        "implements": [
+                "http://aps-standard.org/types/core/application/1.0"
+        ], 
+        "name": "cloud", 
+        "operations": {
+                "calculateSomething": {
+                        "parameters": {
+                                "paramA": {
+                                        "kind": "query", 
+                                        "type": "integer"
+                                }, 
+                                "paramB": {
+                                        "kind": "query", 
+                                        "type": "integer"
+                                }, 
+                                "paramX": {
+                                        "kind": "path", 
+                                        "type": "string"
+                                }
+                        }, 
+                        "path": "/calculateSomething/{paramX}", 
+                        "response": {
+                                "type": "string"
+                        }, 
+                        "verb": "GET"
+                },
+                "createKeyFunc": {
+                        "verb": "POST",
+                        "path": "/createKey/{pathparam}/{ps}",
+                        "response": {
+                                "contentType": null,
+                                "type": "http://user-mgmt.demo.apsdemo.org/methods/vpses/1.0#OS",
+                                "items": null
+                        },
+                        "access": {
+                                "referrer": true
+                        },
+                        "parameters": {
+                                "pathparam": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "path"
+                                },
+                                "OS": {
+                                        "type": "http://user-mgmt.demo.apsdemo.org/methods/vpses/1.0#OS",
+                                        "required": true,
+                                        "kind": "body"
+                                },
+                                "ps": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "path"
+                                },
+                                "number": {
+                                        "type": "integer",
+                                        "required": true,
+                                        "kind": "query"
+                                },
+                                "querystr": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "query"
+                                },
+                                "bool": {
+                                        "type": "boolean",
+                                        "required": true,
+                                        "kind": "query"
+                                }
+                        }
+                },
+                "createCounterFunc": {
+                        "verb": "POST",
+                        "path": "/createCounter/{pathparam}",
+                        "response": {
+                                "contentType": null,
+                                "type": "http://user-mgmt.demo.apsdemo.org/methods/vpses/1.0#OS",
+                                "items": null
+                        },
+                        "access": {
+                                "referrer": true
+                        },
+                        "parameters": {
+                                "pathparam": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "path"
+                                },
+                                "count": {
+                                        "type": "http://aps-standard.org/types/core/resource/1.0#Counter",
+                                        "required": true,
+                                        "kind": "query"
+                                }
+                        }
+                },
+                "testFunc": {
+                        "verb": "POST",
+                        "path": "/test/{first}",
+                        "response": {
+                                "contentType": null,
+                                "type": "http://user-mgmt.demo.apsdemo.org/methods/vpses/1.0#OS",
+                                "items": null
+                        },
+                        "access": {
+                                "referrer": true
+                        },
+                        "parameters": {
+                                "first": {
+                                        "type": "integer",
+                                        "required": true,
+                                        "kind": "path"
+                                },
+                                "second": {
+                                        "type": "http://aps-standard.org/types/core/resource/1.0#Counter",
+                                        "required": true,
+                                        "kind": "body"
+                                }
+                        }
+                },
+                "test_func_1": {
+                        "verb": "POST",
+                        "path": "/test_1/{person}/{name}",
+                        "response": {
+                                "contentType": null,
+                                "type": "http://user-mgmt.demo.apsdemo.org/methods/vpses/1.0#OS",
+                                "items": null
+                        },
+                        "access": {
+                                "referrer": true
+                        },
+                        "parameters": {
+                                "noti": {
+                                        "type": "http://aps-standard.org/types/core/resource/1.0#Notification",
+                                        "required": true,
+                                        "kind": "body"
+                                },
+                                "person": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "path"
+                                },
+                                "name": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "path"
+                                },
+                                "age": {
+                                        "type": "integer",
+                                        "required": true,
+                                        "kind": "query"
+                                }
+                        }
+                },
+                "test_static_func_1": {
+                        "verb": "POST",
+                        "path": "/test_static_1/{name}",
+                        "static": "true",
+                        "response": {
+                                "contentType": null,
+                                "type": "http://user-mgmt.demo.apsdemo.org/methods/vpses/1.0#OS",
+                                "items": null
+                        },
+                        "access": {
+                                "referrer": true
+                        },
+                        "parameters": {
+                                "name": {
+                                        "type": "string",
+                                        "required": true,
+                                        "kind": "path"
+                                }
+                        }
+                }
+
+        }, 
+        "properties": {
+                "apphost": {
+                        "description": "Cloud management server IP or domain name", 
+                        "title": "apphost", 
+                        "type": "string"
+                }, 
+                "cloudadmin": {
+                        "description": "Cloud administrator", 
+                        "title": "Cloud Admin", 
+                        "type": "string"
+                }, 
+                "cloudpass": {
+                        "description": "Cloud administrator password", 
+                        "encrypted": true, 
+                        "title": "Cloud Password", 
+                        "type": "string"
+                }
+        }, 
+        "relations": {
+                "contexts": {
+                        "collection": true, 
+                        "type": "http://aps-standard.org/samples/starter/context/1.0"
+                }
+        }, 
+        "structures": null
+}]

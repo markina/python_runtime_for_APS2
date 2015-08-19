@@ -1,0 +1,19 @@
+{
+        "aps": {
+                "id": "7afc806c-9ce9-416f-bc75-c844a3d07c8f",
+                "type": "http://aps-standard.org/samples/starter",
+                "endpoint": "https://endpoint.a.apscloudstest.apsdemo.org:443/endpoint000/"
+        },
+        "clouds": {
+                "type": "http://aps-standard.org/samples/starter/cloud/1.0",
+                "name": "VPS cloud globals",
+                "summary": "VPS cloud application global service",
+                "schema": "/aps/2/types/90"
+        },
+        "contexts": {
+                "type": "http://aps-standard.org/samples/starter/context/1.0",
+                "name": "VPS Management",
+                "summary": "VPS management environment",
+                "schema": "/aps/2/types/91"
+        }
+}

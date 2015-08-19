@@ -1,0 +1,49 @@
+<ns0:application packaged="2015-07-17T14:17:01" version="2.0" xmlns:ns0="http://aps-standard.org/ns/2">
+    <ns0:id>http://aps-standard.org/samples/starter</ns0:id>
+    <ns0:name>Sample VPS Cloud Starter</ns0:name>
+    <ns0:version>2.1</ns0:version>
+    <ns0:release>1</ns0:release>
+    <ns0:homepage>http://doc.apsstandard.org/pa/demo-projects/starter</ns0:homepage>
+    <ns0:vendor>
+    	<ns0:name>APS team</ns0:name>
+    	<ns0:homepage>http://dev.apsstandard.org/</ns0:homepage>
+    </ns0:vendor>
+  	<ns0:packager>
+           <ns0:name>APS team</ns0:name>
+    	   <ns0:homepage>http://dev.apsstandard.org/</ns0:homepage>
+    	   <ns0:uri>http://dev.apsstandard.org/</ns0:uri>
+        </ns0:packager>
+    <ns0:presentation>
+    	<ns0:summary>Simplest starter multi-tenant application</ns0:summary>
+    	<ns0:description>This is a demo application to demonstrate how to develop APS apps step by step</ns0:description>
+        <ns0:icon path="images/icon.png" />
+    	<ns0:categories>
+           <ns0:category>Samples</ns0:category>
+    	   <ns0:category>Infrastructure/Management</ns0:category>
+    	</ns0:categories>
+    </ns0:presentation>
+    <ns0:license-agreement must-accept="true">
+	<ns0:free />
+	<ns0:text>
+		<ns0:name>End-User License Agreement</ns0:name>
+		<ns0:file>http://opensource.org/licenses/bsd-license</ns0:file>
+	</ns0:text>
+    </ns0:license-agreement>
+    <ns0:upgrade match="version=ge=0.1" />
+    <ns0:service id="clouds">
+		<ns0:schema path="schemas/clouds.schema" />
+<ns0:code engine="py" path="scripts/clouds.py" />
+		<ns0:presentation>
+			<ns0:name>VPS cloud globals</ns0:name>
+			<ns0:summary>VPS cloud application global service</ns0:summary>
+		</ns0:presentation>
+    </ns0:service>
+    <ns0:service id="contexts">
+		<ns0:schema path="schemas/contexts.schema" />
+<ns0:code engine="py" path="scripts/contexts.py" />
+		<ns0:presentation>
+			<ns0:name>VPS Management</ns0:name>
+			<ns0:summary>VPS management environment</ns0:summary>
+		</ns0:presentation>
+    </ns0:service>
+</ns0:application>
