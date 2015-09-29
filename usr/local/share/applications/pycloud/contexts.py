@@ -1,4 +1,3 @@
-from aps2.apsapi import JsonNode
 from aps2.aps import ResourceBase
 
 

@@ -1,6 +1,5 @@
 import sys
 
-# sys.path.append('/var/www/html/pycloud/')
 sys.path.append('/usr/lib/python2.6/site-packages/aps2/')
 
 from aps2.aps import ResourceBase
@@ -98,10 +97,15 @@ class cloud(ResourceBase):
         aps2.uLogging.info("IN CLOUD:test_func_1: noti.person = " + str(person) + " type = " + str(type(person)))
         aps2.uLogging.info("IN CLOUD:test_func_1: noti.name = " + str(name) + " type = " + str(type(name)))
         aps2.uLogging.info("IN CLOUD:test_func_1: noti.age = " + str(age) + " type = " + str(type(age)))
+        # print "TEST_ok"
+        # print "IN CLOUD:test_func_1: noti.type = " + str(noti.type) + " type = " + str(type(noti.type))
+        # print "IN CLOUD:test_func_1: noti.time = " + str(noti.time) + " type = " + str(type(noti.time))
 
     @staticmethod
     def test_static_func_1(name):
-        
+
+        aps2.uLogging.info("....")
         aps2.uLogging.info("IN CLOUD: I'm static function!")
         aps2.uLogging.info("IN CLOUD: name = " + name)
+        # print "TEST_ok, name = " + name
 
